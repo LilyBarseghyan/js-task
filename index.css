@@ -1,0 +1,261 @@
+body {
+    background-color: hsl(180, 52%, 96%);
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 15px;
+}
+.filter-box, .start {
+    background-color: white;
+}
+.filter-box {
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 6px;
+    max-width: 810px; display: none; align-content: center;
+}
+#job-listing-container {
+    margin: 20px auto;
+    max-width: 830px;
+}
+.attribution {
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+}
+.start {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 6px;
+}
+.start:hover {
+    background-color: #f4f4f4;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    border-left: thick solid #45afaf;
+}
+img {
+    margin: 0px 10px;
+}
+.additional-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+}
+.job-listing {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+}
+.additional-details .languages span {
+    margin-right: 10px;
+}
+.selected-filters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.filter-tag {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.filter-tag.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.new {
+    border-radius: 20px;
+    padding: 4px;
+    background-color: #64baba;;
+    color: white;
+}
+.featured {
+    border-radius: 20px;
+    padding: 4px;
+    background-color: #000000;
+    color: white;
+}
+.company-name {
+    color: #64baba;
+}
+.job-title:hover {
+    color: #64baba;
+    cursor: pointer;
+}
+.job, .details {
+    margin-top: 10px;
+}
+  /* Desktop Version (default) */
+.tabs__image {
+    width: 100%;
+    height: auto;
+    background-image: url('images/bg-header-desktop.svg');
+}  
+  /* Mobile Version */
+@media (max-width: 375px) {
+    .tabs__image {
+        content: url('images/bg-header-mobile.svg');
+    }
+}
+@media (max-width: 800px) {
+    .start {
+        display: flex !important; 
+        align-items: center !important;
+        margin-bottom: 50px !important;
+        flex-direction: column !important;
+        align-items: flex-start;
+    }
+    .info {
+        align-items: flex-start !important;
+        flex-direction: column !important;
+        width: auto;
+        max-width: 400px;
+    }
+    img {
+        align-self: flex-start;
+        transform: translateY(-50%);
+        width: 44px;
+    }
+    #job-listing-container {
+        margin: 0 130px !important; 
+    }
+    .filter-box {
+        margin: 20px 130px;
+    }
+    .additional-details {
+        border-top: 2px solid #d5d5d5;
+        padding-top: 20px;
+    }
+    .job-listing {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .additional-details {
+        justify-content: flex-start;
+    }
+    button {
+        margin-bottom: 10px;
+    }
+    .tool-button, .language-button {
+        margin-left: 5px;
+    }
+}  
+@media (max-width: 480px) {
+    .tool-button, .language-button {
+        flex: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #job-listing-container {
+        margin: 0 50px !important;
+    }
+    .filter-box {
+        margin: 20px 50px !important;
+    }
+}
+@media (max-width: 375px) {
+    .tool-button, .language-button {
+        flex: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    img {
+        transform: translateY(-50%);
+    }
+}
+button {
+    border: 0px solid #64baba;
+    background-color: hsl(180, 31%, 95%);
+    color: #0e7070;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+button:hover {
+    background-color: #64baba;
+    color: #ffffff;
+    cursor: pointer;
+}
+.role, .level, .language-button, .tool-button {
+    margin: 0px 0px 10px 10px !important;
+}
+#clear-filters {
+    float: right;
+    padding: 7px 10px;
+    background-color: transparent;
+    color: #64baba;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#clear-filters:hover {
+    text-decoration: underline;
+}
+.header {
+    font-family: "League Spartan", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+.job {
+    font-family: "League Spartan", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+.details {
+    color: hsl(180, 8%, 52%);
+    gap: 10px;
+}
+.job-type::before, .location::before {
+    content: "•";
+    padding-right: 10px;
+    color: #898989;
+} 
+.clear-filter {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    background: #45afaf;
+    padding: 7.5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: 8px !important;
+    cursor: pointer;
+}
+  
+.clear-filter:hover {
+    background-color: black;  
+}
+.filter-item-role, .filter-item-level, .filter-item-language-button, .filter-item-tool-button {
+    position: relative;
+    padding-right: 35px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.filter-item-role:hover, .filter-item-level:hover, .filter-item-language-button:hover, .filter-item-tool-button:hover {
+    cursor: auto;
+    background-color: #e4f1f1;
+    color: #0e7070;
+}
