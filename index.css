@@ -2,19 +2,22 @@ body {
     background-color: hsl(180, 52%, 96%);
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;
-    font-weight: weight;
     font-style: normal;
     font-size: 15px;
+    margin: 0px;
 }
 .filter-box, .start {
     background-color: white;
 }
 .filter-box {
-    margin: 20px auto;
+    margin: 0px auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
     border-radius: 6px;
-    max-width: 810px; display: none; align-content: center;
+    max-width: 810px;
+    display: none;
+    align-content: center;
+    transform: translateY(-50%);
 }
 #job-listing-container {
     margin: 20px auto;
@@ -39,7 +42,7 @@ body {
     transform: scale(1.02);
     border-left: thick solid #45afaf;
 }
-img {
+.start img {
     margin: 0px 10px;
 }
 .additional-details {
@@ -107,13 +110,15 @@ img {
   /* Desktop Version (default) */
 .tabs__image {
     width: 100%;
-    height: auto;
+    height: 155px;
+    background-color: #5b9fa0;
     background-image: url('images/bg-header-desktop.svg');
 }  
   /* Mobile Version */
 @media (max-width: 375px) {
     .tabs__image {
-        content: url('images/bg-header-mobile.svg');
+        background-color: #5b9fa0;
+        background-image: url('images/bg-header-mobile.svg') !important;
     }
 }
 @media (max-width: 800px) {
@@ -130,16 +135,16 @@ img {
         width: auto;
         max-width: 400px;
     }
-    img {
+    .start img {
         align-self: flex-start;
         transform: translateY(-50%);
         width: 44px;
     }
     #job-listing-container {
-        margin: 0 130px !important; 
+        margin: 20px 130px !important; 
     }
     .filter-box {
-        margin: 20px 130px;
+        margin: 0px 130px;
     }
     .additional-details {
         border-top: 2px solid #d5d5d5;
@@ -167,10 +172,10 @@ img {
         margin-right: 0;
     }
     #job-listing-container {
-        margin: 0 50px !important;
+        margin: 20px 50px !important;
     }
     .filter-box {
-        margin: 20px 50px !important;
+        margin: 0px 50px !important;
     }
 }
 @media (max-width: 375px) {
@@ -179,7 +184,7 @@ img {
         margin-left: 0;
         margin-right: 0;
     }
-    img {
+    .start img {
         transform: translateY(-50%);
     }
 }
